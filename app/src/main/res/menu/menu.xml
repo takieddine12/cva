@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/view1"
+        android:title="WebView 1" />
+
+    <item
+        android:id="@+id/view2"
+        android:title="WebView 2" />
+
+    <item
+        android:id="@+id/view3"
+        android:title="WebView 3" />
+
+    <item
+        android:id="@+id/view4"
+        android:title="WebView 4" />
+
+</menu>
