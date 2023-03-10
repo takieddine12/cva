@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.app.carouselviewapp.R;
 import com.app.carouselviewapp.models.ScrollModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -43,8 +44,8 @@ public class AutoScrollAdapter2 extends RecyclerView.Adapter<AutoScrollAdapter2.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ScrollModel model = arrayList.get(position);
-        holder.textView.setText(model.getTitle());
-        holder.imageView.setImageResource(model.getDrawable());
+
+        Picasso.get().load(model.getUrl()).into(holder.imageView);
 
         holder.imageView.setOnClickListener(v -> {
             Bundle bundle = new Bundle();

@@ -65,25 +65,7 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-        itemList1 = new ArrayList<>();
-        itemList1.add(new ScrollModel(R.drawable.img1, "Harry Potter", "https://www.google.com"));
-        itemList1.add(new ScrollModel(R.drawable.img2, "IM Legend", "https://www.yahoo.com"));
-        itemList1.add(new ScrollModel(R.drawable.img3, "Nature", "https://www.youtube.com"));
-        itemList1.add(new ScrollModel(R.drawable.img4, "Coffee Cup", "https://www.bing.com"));
-
-        itemList2 = new ArrayList<>();
-        itemList2.add(new ScrollModel(R.drawable.img5, "Image 5", "https://www.google.com"));
-        itemList2.add(new ScrollModel(R.drawable.img6, "Image 6", "https://www.yahoo.com"));
-        itemList2.add(new ScrollModel(R.drawable.img7, "Image 7", "https://www.youtube.com"));
-        itemList2.add(new ScrollModel(R.drawable.img8, "Image 8", "https://www.bing.com"));
-
-        itemList3 = new ArrayList<>();
-        itemList3.add(new ScrollModel(R.drawable.img9, "Image 9", "https://www.google.com"));
-        itemList3.add(new ScrollModel(R.drawable.img10, "Image 10", "https://www.yahoo.com"));
-        itemList3.add(new ScrollModel(R.drawable.img11, "Image 11", "https://www.youtube.com"));
-        itemList3.add(new ScrollModel(R.drawable.img12, "Image 12", "https://www.bing.com"));
-
+        initLists();
         setUpFirstRecyclerView();
         setUpSecondRecyclerView();
         setUpThirdRecyclerView();
@@ -285,5 +267,49 @@ public class HomeFragment extends Fragment {
         handler.postDelayed(runnable, 900);
     }
 
+   // INIT LISTS
+    public void initLists(){
+        //
+        itemList1 = new ArrayList<>();
+        itemList1.add(new ScrollModel( "https://store-images.s-microsoft.com/image/apps.28856.69802328231064156.03ff84cc-b6b1-4226-8e6c-545d183e5fbf.b6546b0b-9563-4129-b79e-15bb4282048a"));
+        itemList1.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2020/10/Destiny-2-Shadowkeep-Expansion-–-Everything-You-Need-To-Know-600x338.jpg"));
+        itemList1.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2020/07/Apex-Legends-450x253.jpg"));
+        itemList1.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2020/09/Rainbow-Six-Siege-600x338.jpg"));
+        itemList1.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2019/11/The-Witcher-3-Wild-Hunt-450x254.jpg"));
+        itemList1.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2020/12/Anno-1800-600x271.jpg"));
+        itemList1.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2019/12/Assassin’s-Creed-Odyssey-450x253.jpg"));
+        itemList1.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2021/03/Hellish-Quart-600x338.jpg"));
+        itemList1.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2019/12/Kingdom-Come-Deliverance-450x253.jpg"));
+        itemList1.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2020/05/cyberpunk-2077-450x224.jpg"));
 
+
+        ///
+        itemList2 = new ArrayList<>();
+        itemList2.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2019/12/Shadow-of-the-Tomb-Raider-1-450x258.jpg"));
+        itemList2.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2019/08/no-mans-sky-beyond-release-date-450x253.jpg"));
+        itemList2.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2018/09/metro-exodus-release-date-450x253.jpg"));
+        itemList2.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2020/02/Ultrakill-450x210.jpg"));
+        itemList2.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2021/03/Control-Ultimate-Edition-600x338.jpg"));
+        itemList2.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2023/03/Devil-May-Cry-Games-In-Order.jpg"));
+        itemList2.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2023/02/Spyro-Games-In-Order.jpg"));
+        itemList2.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2023/02/best-4X-games-on-PC-conquest-of-eo.jpg"));
+        itemList2.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2022/11/street-fighter-6-fighting-game-1536x864.jpg"));
+        itemList2.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2023/02/best-games-like-the-last-of-us.jpg"));
+
+
+        ///
+        itemList3 = new ArrayList<>();
+        itemList3.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2023/02/best-marvel-games-marvel-snap.jpg"));
+        itemList3.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2023/03/Sword-Art-Online-Games-In-Order.jpg"));
+        itemList3.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2023/03/Best-Games-Like-Arma-Reforger.jpg"));
+        itemList3.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2023/03/Castlevania-Games-In-Order.jpg"));
+        itemList3.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2023/03/Marvel-Ultimate-Alliance-Games-In-Order.jpg"));
+        itemList3.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2023/03/Best-Resident-Evil-2-Remake-Mods.jpg"));
+        itemList3.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2022/02/Best-Games-Like-Clash-Of-Clans.jpg"));
+        itemList3.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2022/02/Best-Games-Like-Elden-Ring.jpg"));
+        itemList3.add(new ScrollModel(  "https://www.gamingscan.com/wp-content/uploads/2023/03/best-nintendo-exclusives-fire-emblem-engage.jpg"));
+        itemList3.add(new ScrollModel( "https://www.gamingscan.com/wp-content/uploads/2022/02/Best-Games-Like-Guardians-Of-The-Galaxy.jpg"));
+
+
+    }
 }
