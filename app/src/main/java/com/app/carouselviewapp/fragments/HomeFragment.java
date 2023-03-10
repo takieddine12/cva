@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavHostController;
@@ -32,6 +33,7 @@ import com.app.carouselviewapp.adapters.AutoScrollAdapter3;
 import com.app.carouselviewapp.adapters.RecyclerItemClickListener;
 import com.app.carouselviewapp.models.ScrollModel;
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class HomeFragment extends Fragment {
@@ -55,14 +57,10 @@ public class HomeFragment extends Fragment {
         recyclerView1 = view.findViewById(R.id.recyclerView1);
         recyclerView2 = view.findViewById(R.id.recyclerView2);
         recyclerView3 = view.findViewById(R.id.recyclerView3);
+        Objects.requireNonNull(((AppCompatActivity) requireActivity()).getSupportActionBar()).show();
         return view;
     }
 
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-        onCreate(savedInstanceState);
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {

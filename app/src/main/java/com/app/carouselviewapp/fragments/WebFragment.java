@@ -26,7 +26,11 @@ public class WebFragment extends Fragment  {
     private WebView webView1,webView2,webView3,webView4;
     public DrawerLayout drawerLayout;
     public NavigationView navigationView;
-    private final String[] _urls = new String[]{"https://www.google.com", "https://www.yahoo.com", "https://www.baidu.com", "https://www.facebook.com"};
+    private final String[] _urls = new String[]{
+            "https://www.google.com",
+            "https://www.yahoo.com",
+            "https://www.baidu.com",
+            "https://www.facebook.com"};
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -42,22 +46,13 @@ public class WebFragment extends Fragment  {
     }
 
 
-
-    @SuppressLint({"SetJavaScriptEnabled", "ClickableViewAccessibility"})
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        initWebViews();
         createDrawer();
-        showWebView1();
     }
 
-
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-        onCreate(savedInstanceState);
-    }
 
     private void createDrawer(){
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
@@ -87,41 +82,52 @@ public class WebFragment extends Fragment  {
             }
         });
     }
+    @SuppressLint("SetJavaScriptEnabled")
+    private void initWebViews(){
+        // WEB 1
+        webView1.getSettings().setJavaScriptEnabled(true);
+        webView1.setWebViewClient(new XYWebViewClient());
+        webView1.loadUrl(_urls[0]);
+
+        // WEB 2
+        webView2.getSettings().setJavaScriptEnabled(true);
+        webView2.setWebViewClient(new XYWebViewClient());
+        webView2.loadUrl(_urls[1]);
+
+        // WEB 3
+        webView3.getSettings().setJavaScriptEnabled(true);
+        webView3.setWebViewClient(new XYWebViewClient());
+        webView3.loadUrl(_urls[2]);
+
+        // WEB 4
+        webView4.getSettings().setJavaScriptEnabled(true);
+        webView4.setWebViewClient(new XYWebViewClient());
+        webView4.loadUrl(_urls[3]);
+    }
     private void showWebView1(){
         webView1.setVisibility(View.VISIBLE);
         webView2.setVisibility(View.GONE);
         webView3.setVisibility(View.GONE);
         webView4.setVisibility(View.GONE);
-        webView1.getSettings().setJavaScriptEnabled(true);
-        webView1.setWebViewClient(new XYWebViewClient());
-        webView1.loadUrl(_urls[0]);
     }
     private void showWebView2(){
         webView1.setVisibility(View.GONE);
         webView2.setVisibility(View.VISIBLE);
         webView3.setVisibility(View.GONE);
         webView4.setVisibility(View.GONE);
-        webView2.getSettings().setJavaScriptEnabled(true);
-        webView2.setWebViewClient(new XYWebViewClient());
-        webView2.loadUrl(_urls[1]);
     }
     private void showWebView3(){
         webView1.setVisibility(View.GONE);
         webView2.setVisibility(View.GONE);
         webView3.setVisibility(View.VISIBLE);
         webView4.setVisibility(View.GONE);
-        webView3.getSettings().setJavaScriptEnabled(true);
-        webView3.setWebViewClient(new XYWebViewClient());
-        webView3.loadUrl(_urls[2]);
+
     }
     private void showWebView4(){
         webView1.setVisibility(View.GONE);
         webView2.setVisibility(View.GONE);
         webView3.setVisibility(View.GONE);
         webView4.setVisibility(View.VISIBLE);
-        webView2.getSettings().setJavaScriptEnabled(true);
-        webView4.setWebViewClient(new XYWebViewClient());
-        webView2.loadUrl(_urls[3]);
     }
     private static class XYWebViewClient extends  WebViewClient {
         @Override

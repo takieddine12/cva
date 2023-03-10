@@ -54,20 +54,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageButton1"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:background="@drawable/rounded_image_button"
+            android:text="15"
             android:textColor="@color/white"
             android:visibility="gone"
-            android:text="15"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.487"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/fab"
+            app:layout_constraintEnd_toEndOf="@+id/fab"
+            app:layout_constraintStart_toStartOf="@+id/fab"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.007" />
+            app:layout_constraintVertical_bias="0.0" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageButton2"
             android:layout_width="50dp"
@@ -76,11 +77,10 @@
             android:text="25"
             android:textColor="@color/white"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/fab"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.98"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/fab" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageButton3"
             android:layout_width="50dp"
@@ -91,10 +91,11 @@
             android:textColor="@color/white"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.966" />
+            app:layout_constraintEnd_toEndOf="@+id/fab"
+            app:layout_constraintStart_toStartOf="@+id/fab"
+            app:layout_constraintTop_toBottomOf="@+id/fab"
+            app:layout_constraintVertical_bias="1.0" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/imageButton4"
             android:layout_width="50dp"
@@ -104,12 +105,9 @@
             android:text="45"
             android:textColor="@color/white"
             android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintBottom_toBottomOf="@+id/fab"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.48" />
+            app:layout_constraintTop_toTopOf="@+id/fab" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
